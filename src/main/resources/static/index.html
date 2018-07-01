@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+    <title>SignIn</title>
+    <meta charset="utf-8"/>
+    <script src="js/cookie.js"></script>
+    <script src="js/md5.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/login.js"></script>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-cloak>
+<div ng-controller="loginController">
+    <form>
+        <p class="p1">Login: <input type="text" ng-model="username" name="login" autofocus/></p>
+        <p class="p2">Password: <input type="password" ng-model="password" name="password"/></p>
+        <p class="p3" ng-model="message">{{message}}</p>
+        <input class="loginButton" type="submit" ng-click="sendUser()" value="Log In"/>
+    </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+body {
+    background: url('../img/clouds.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.title {
+    margin-top: -10px;
+    font-size: 70px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    text-shadow: 5px 3px 0px #b2a98f,
+             5px 14px 10px rgba(0,0,0,0.15),
+             5px 24px 2px rgba(0,0,0,0.1),
+             5px 34px 30px rgba(0,0,0,0.1);
+}
+
+.userData {
+    position: absolute;
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: center;
+    color: lightgreen;
+    text-shadow: 1px 1px 1px #000;
+    left: 10px;
+    top: -10px;
+    width: 200px;
+    height: 100px;
+}
+
+.signOut {
+    font-size: 18px;
+    padding: 3px;
+    background-color: lightgray;
+}
+
+.users {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: 250px;
+    height: calc(100% - 200px);
+    background-color: white;
+    border: 5px ridge lightgray;
+}
+
+.messages {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    width: calc(100% - 350px);
+    height: calc(100% - 270px);
+    background-color: rgb(159, 243, 103);
+    border: 5px ridge lightgray;
+    overflow: scroll;
+}
+
+.usersSelect {
+    font-size: 15px;
+    color: brown;
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    position: absolute;
+    font-size: 15px;
+    top: calc(100% - 150px);
+    left: 300px;
+    width: calc(100% - 350px);
+    height: 90px;
+    background-color: white;
+    border: 5px ridge lightgray;
+    resize: none;
+    float: left;
+}
+
+.submit {
+    position: absolute;
+    background-color: lightgray;
+    left: calc(100% - 150px);
+    top: calc(100% - 45px);
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.option1 {
+    color: red;
+}
+
+.option2 {
+    color: green;
+}
+
+.selectedUser {
+    position: absolute;
+    font-size: 20px;
+    top: 75px;
+    left: 310px;
+    height: 145px;
+    color: black;
+    text-shadow: green 0 0 2px;
+}
+
+.userTable {
+    width: 100%;
+    cursor: default;
+}
+
+td {
+    height: 30px;
+}
+
+.userTable tr:hover {
+    background: #f3bd48; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+.messageTable {
+    width: 100%;
+}
+
+.img {
+    max-height: 200px;
+    max-width: 100%;
+    display: block;
+}
+
+.labelImage {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    bottom: 3px;
+    left: 300px;
+    border: 5px outset lightcoral;
+}
+
+.statusButton {
+    position: absolute;
+    top: 68px;
+    left: 150px;
+    width: 70px;
+    height: 20px;
+    color: blue;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>MessengeR</title>
+        <meta charset="utf-8"/>
+        <script src="js/cookie.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/messenger.js"></script>
+        <link href="css/messenger.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body ng-cloak>
+        <div class="title">
+            MessengeR
+        </div>
+
+        <div class="userData" ng-controller="loginController">
+            <p>{{currentUser}}</p>
+            <input class="signOut" type="button" ng-click="signOut()" value="Sign Out" />
+            <input class="statusButton" type="button" ng-style="statusStyle" ng-click="changeStatus()" value={{status}} />
+        </div>
+
+        <div ng-controller="usersController">
+            <div class="users">
+                <table class="userTable">
+                    <tr ng-repeat="user in users" ng-click="selectUser(user)">
+                        <td align="center" valign="center" ng-init="imgPath = 'img/' + user.status + '.jpg';">
+                            <img src="{{ imgPath }}"/>
+                        </td>
+                        <td>{{user.firstname + ' ' + user.lastname}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="selectedUser">
+                {{selectedUser}}
+            </div>
+        </div>
+        <div id="MessageTable" class="messages" ng-controller="messagesController">
+            <table  class="messageTable" cellpadding="1px" cellspacing="2px">
+                <tr ng-repeat="message in messages" ng-class="{'option1': message.toUser == friendId, 'option2': message.toUser != friendId}">
+                    <td ng-if="message.pic == undefined">
+                        <b>{{ (message.toUser == friendId ? me : friend) }} ({{millsToDate(message.timestamp)}}):</b> {{message.message}}
+                    </td>
+                    <td ng-if="message.pic != undefined">
+                        <b>{{ (message.toUser == friendId ? me : friend) }} ({{millsToDate(message.timestamp)}}):</b> <img class="img" src="{{message.pic}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div ng-controller="newMessage">
+            <label for="file"><img class="labelImage" src="/img/dog.jpg" title="Add Image" /></label>
+            <input type="file" id="file" onchange="angular.element(this).scope().doUploadFile(this.files)" accept="image/*" hidden>
+            <textarea ng-model="textModel" autofocus>
+
+            </textarea>
+            <input class="submit" type="button" value="Send" ng-click="sendMessage(textModel)"/>
+        </div>
+
+    </body>
+</html>

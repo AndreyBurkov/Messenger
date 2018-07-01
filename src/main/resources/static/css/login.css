@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    font-size: 20pt;
+}
+
+form {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    background-color: aqua;
+    border-radius: 50px;
+}
+
+.p1 {
+    position: relative;
+    margin-left: 30px;
+    margin-top: 70px;
+    margin-right: 30px;
+    text-align: right;   
+}
+
+.p2 {
+    position: relative;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    text-align: right;   
+}
+
+.p3 {
+    color: red;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+input {
+    width: 180px;
+    font-size: 20pt;
+    margin-left: 20px;
+}
+
+.loginButton {   
+    position: relative; 
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
+
+    /*margin-top: 35px;*/
+}
